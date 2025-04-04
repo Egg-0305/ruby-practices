@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require 'date'
-require 'optparse'
+require "date"
+require "optparse"
 
 target_month = Date.today.month
 target_year = Date.today.year
@@ -8,10 +8,10 @@ target_year = Date.today.year
 opt = OptionParser.new
 
 opt.on("-m MONTH", Integer) { |m| target_month = m }
-opt.on("-y YEAR", Integer){ |y| target_year = y }
-opt.parse!(ARGV) 
+opt.on("-y YEAR", Integer) { |y| target_year = y }
+opt.parse!(ARGV)
 
-def title(month:,year:)
+def title(month:, year:)
   "#{month}月 #{year}"
 end
 
